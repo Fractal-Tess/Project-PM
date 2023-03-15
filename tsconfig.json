@@ -9,12 +9,10 @@
     "allowJs": true,
     "checkJs": true,
     "paths": {
+      "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
       "$components/*": ["src/lib/components/*"],
-      "$assets/*": ["src/assets/*"],
-      "$router/*": ["src/lib/router/*"],
-      "$layout/*": ["src/lib/layout/*"],
-      "$data/*": ["src/lib/data/*"],
+      "$routes/*": ["src/routes/*"],
       "$types": ["src/types.ts"]
     }
   },

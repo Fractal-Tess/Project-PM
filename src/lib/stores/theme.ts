@@ -10,7 +10,7 @@ const createThemeStore = () => {
     localStorage.setItem('theme', theme);
   }
 
-  const { subscribe, update } = writable<Theme>(theme);
+  const { subscribe, update } = writable(theme);
 
   return {
     subscribe,
@@ -23,5 +23,4 @@ const createThemeStore = () => {
     }
   };
 };
-
 export const theme = createThemeStore();

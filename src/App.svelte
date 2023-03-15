@@ -1,7 +1,7 @@
 <script lang="ts">
   import { theme } from '$lib/stores/theme';
-  import Router from '$lib/router/Router.svelte';
-  import BaseLayout from '$lib/layout/BaseLayout.svelte';
+  import Router from './Router.svelte';
+  import Layout from '$lib/layouts/base/Layout.svelte';
 
   $: {
     document.documentElement.setAttribute('data-theme', $theme);
@@ -9,6 +9,6 @@
   }
 </script>
 
-<BaseLayout>
+<Layout>
   <Router />
-</BaseLayout>
+</Layout>

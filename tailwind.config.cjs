@@ -23,7 +23,7 @@ const config = {
           secondary: '#FF1E56',
           neutral: '#A9FFF7',
           accent: '#E3E7AF',
-          'base-100': '#11151C'
+          'base-100': '#fff'
         },
         dark: {
           ...require('daisyui/src/colors/themes')['[data-theme=black]'],

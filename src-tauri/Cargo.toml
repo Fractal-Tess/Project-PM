@@ -1,13 +1,13 @@
 [package]
-name = "svelte-tauri"
-version = "0.0.1"
-description = "Svelte-Tauri template starter"
+name = "project-pm"
+version = "0.1.0"
+description = "project-pm template starter"
 authors = ["Fractal-Tess"]
 license = "MIT"
-repository = "https://github.com/Fractal-Tess/Svelte-Tauri"
-default-run = "svelte-tauri"
+repository = "https://github.com/Fractal-Tess/project-pm"
+default-run = "project-pm"
 edition = "2021"
-rust-version = "1.65"
+rust-version = "1.68"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
