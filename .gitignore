@@ -1,0 +1,11 @@
+# Build folders
+dist
+
+# Rust output 
+target
+
+# Cache
+.eslintcache
+
+# Nodejs
+node_modules

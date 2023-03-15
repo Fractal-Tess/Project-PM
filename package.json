@@ -1,0 +1,69 @@
+{
+  "name": "svelte-tauri",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Fractal-Tess/Svelte-Tauri"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Fractal-Tess",
+    "email": "vgfractal@gmail.com",
+    "url": "https://gist.github.com/Fractal-Tess"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,svelte}": [
+      "eslint --ignore-path=./.eslintignore",
+      "prettier --write --plugin-search-dir=. --ignore-path=./.prettierignore"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@fontsource/roboto": "^4.5.8",
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "@tauri-apps/api": "^1.2.0",
+    "@tauri-apps/cli": "^1.2.3",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "autoprefixer": "^10.4.14",
+    "daisyui": "^2.51.4",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "postcss": "^8.4.21",
+    "postcss-load-config": "^4.0.1",
+    "prettier": "^2.8.4",
+    "prettier-plugin-svelte": "^2.9.0",
+    "prettier-plugin-tailwindcss": "^0.2.4",
+    "svelte": "^3.56.0",
+    "svelte-check": "^3.1.4",
+    "svelte-fa": "^3.0.3",
+    "svelte-preprocess": "^5.0.2",
+    "tailwindcss": "^3.2.7",
+    "tinro": "^0.6.12",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4"
+  },
+  "packageManager": "pnpm@7.9.3"
+}
