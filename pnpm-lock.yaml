@@ -12,8 +12,11 @@ specifiers:
   '@tauri-apps/cli': ^1.2.3
   '@tsconfig/svelte': ^3.0.0
   '@types/node': ^18.15.3
+  '@types/uuid': ^9.0.1
+  '@types/uuid-browser': ^3.1.0
   '@typescript-eslint/eslint-plugin': ^5.55.0
   '@typescript-eslint/parser': ^5.55.0
+  add: ^2.0.6
   autoprefixer: ^10.4.14
   daisyui: ^2.51.4
   eslint: ^8.36.0
@@ -23,6 +26,7 @@ specifiers:
   eslint-plugin-unused-imports: ^2.0.0
   husky: ^8.0.3
   lint-staged: ^13.2.0
+  pnpm: ^7.29.3
   postcss: ^8.4.21
   postcss-load-config: ^4.0.1
   prettier: ^2.8.4
@@ -34,9 +38,12 @@ specifiers:
   svelte-preprocess: ^5.0.2
   svelte-spa-router: ^3.3.0
   tailwindcss: ^3.2.7
+  tauri-plugin-store-api: github:tauri-apps/tauri-plugin-store
   tinro: ^0.6.12
   tslib: ^2.5.0
   typescript: ^4.9.5
+  uuid: ^9.0.0
+  uuid-browser: ^3.1.0
   vite: ^4.1.4
 
 devDependencies:
@@ -51,8 +58,11 @@ devDependencies:
   '@tauri-apps/cli': 1.2.3
   '@tsconfig/svelte': 3.0.0
   '@types/node': 18.15.3
+  '@types/uuid': 9.0.1
+  '@types/uuid-browser': 3.1.0
   '@typescript-eslint/eslint-plugin': 5.55.0_342y7v4tc7ytrrysmit6jo4wri
   '@typescript-eslint/parser': 5.55.0_vgl77cfdswitgr47lm5swmv43m
+  add: 2.0.6
   autoprefixer: 10.4.14_postcss@8.4.21
   daisyui: 2.51.4_j7yt3jd32cwenjqavrrga47yr4
   eslint: 8.36.0
@@ -62,6 +72,7 @@ devDependencies:
   eslint-plugin-unused-imports: 2.0.0_dchlkxfdm6cbfc25bfo3oeha6e
   husky: 8.0.3
   lint-staged: 13.2.0
+  pnpm: 7.29.3
   postcss: 8.4.21
   postcss-load-config: 4.0.1_postcss@8.4.21
   prettier: 2.8.4
@@ -73,9 +84,12 @@ devDependencies:
   svelte-preprocess: 5.0.2_myszeeawkmjjvrp5vs3t62owqy
   svelte-spa-router: 3.3.0
   tailwindcss: 3.2.7_postcss@8.4.21
+  tauri-plugin-store-api: github.com/tauri-apps/tauri-plugin-store/971c3d86fb614871c49e27a30124454c66ca3a53
   tinro: 0.6.12
   tslib: 2.5.0
   typescript: 4.9.5
+  uuid: 9.0.0
+  uuid-browser: 3.1.0
   vite: 4.1.4_@types+node@18.15.3
 
 packages:
@@ -809,6 +823,14 @@ packages:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
 
+  /@types/uuid-browser/3.1.0:
+    resolution: {integrity: sha512-H8KMUicLgRzbTpVr7ixXud05rjJ2B6qypNj1utmchqfOH9N2eG9IuzLHsMhoe94Fn+eXGoshnYbP3A1jyzhpmg==}
+    dev: true
+
+  /@types/uuid/9.0.1:
+    resolution: {integrity: sha512-rFT3ak0/2trgvp4yYZo5iKFEPsET7vKydKF+VRCxlQ9bpheehyAJH89dAkaLEq/j/RZXJIqcgsmPJKUP1Z28HA==}
+    dev: true
+
   /@typescript-eslint/eslint-plugin/5.55.0_342y7v4tc7ytrrysmit6jo4wri:
     resolution: {integrity: sha512-IZGc50rtbjk+xp5YQoJvmMPmJEYoC53SiKPXyqWfv15XoD2Y5Kju6zN0DwlmaGJp1Iw33JsWJcQ7nw0lGCGjVg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -970,6 +992,10 @@ packages:
     resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: true
+
+  /add/2.0.6:
+    resolution: {integrity: sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==}
     dev: true
 
   /aggregate-error/3.1.0:
@@ -2881,6 +2907,12 @@ packages:
       find-up: 4.1.0
     dev: true
 
+  /pnpm/7.29.3:
+    resolution: {integrity: sha512-w4tVG3ZV1txgM2bp9/XMmqSYYO3qdhyMVdU8S0zegVvfB6SxNL+nxRq5t7hhw+yc+GrKegyZuIp9aWPhy6NNMA==}
+    engines: {node: '>=14.6'}
+    hasBin: true
+    dev: true
+
   /postcss-import/14.1.0_postcss@8.4.21:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -3796,6 +3828,15 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
+  /uuid-browser/3.1.0:
+    resolution: {integrity: sha512-dsNgbLaTrd6l3MMxTtouOCFw4CBFc/3a+GgYA2YyrJvyQ1u6q4pcu3ktLoUZ/VN/Aw9WsauazbgsgdfVWgAKQg==}
+    dev: true
+
+  /uuid/9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
+    hasBin: true
+    dev: true
+
   /validate-npm-package-license/3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
     dependencies:
@@ -4039,4 +4080,12 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  github.com/tauri-apps/tauri-plugin-store/971c3d86fb614871c49e27a30124454c66ca3a53:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-store/tar.gz/971c3d86fb614871c49e27a30124454c66ca3a53}
+    name: tauri-plugin-store-api
+    version: 0.0.0
+    dependencies:
+      '@tauri-apps/api': 1.2.0
     dev: true
