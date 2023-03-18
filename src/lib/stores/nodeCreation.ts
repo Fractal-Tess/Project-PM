@@ -4,7 +4,7 @@ import type { Node } from '$types';
 const createStore = () => {
   const { subscribe, set, update } = writable<Node>({
     label: 'unset',
-    id: 'test id'
+    id: 'unset'
   });
   return {
     subscribe,
@@ -13,4 +13,4 @@ const createStore = () => {
   };
 };
 
-export const newNode = createStore();
+export const nodeCreationStore = createStore();

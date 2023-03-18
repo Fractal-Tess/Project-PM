@@ -2,81 +2,52 @@
   import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
   import { pop } from 'svelte-spa-router';
   import Fa from 'svelte-fa';
-  import { newNode } from '$lib/stores/newNode';
+  import { nodeCreationStore } from '$lib/stores/nodeCreation';
+  import Input from '$components/Input.svelte';
+  import { nodeStore } from '$lib/stores/node';
 
-  export let params = {};
+  export let params: { id: string };
+
+  console.log(params);
 </script>
 
 <button on:click={pop} class="h-min">
   <Fa icon={faArrowLeftLong} size="2x" />
 </button>
-<!-- Existing node -->
+{#if params.id}
+  <!-- We are viewing & editing a node -->
+  {params.id}
+{:else}
+  <!-- We are creating node -->
+  has no params
+{/if}
+
+<!-- 
 <form
   action=""
   autocomplete="on"
-  class="mt-8 grid h-3/4 justify-items-center sm:grid-cols-1">
+  class="mt-8 grid gap-y-4 justify-items-center sm:grid-cols-1">
+  {$nodeCreationStore.id}
   <h1 class="col-span-full text-center text-2xl font-extrabold">
-    ID - {$newNode.label}
-  </h1>
-  <!-- Email -->
-  <div class="form-control">
-    <label for="email" class="label h-5">
-      <span class="label-text text-primary ">Email</span>
-    </label>
     <input
-      bind:value={$newNode.email}
-      id="email"
-      type="email"
-      class="input-primary input w-80" />
-  </div>
-  <!-- Username -->
-  <div class="form-control">
-    <label class="input-group ">
-      <span class="bg-primary/30">Username</span>
-      <input
-        bind:value={$newNode.username}
-        type="text"
-        autocomplete="on"
-        class="input-bordered input " />
-    </label>
-  </div>
-  <!-- Password -->
-  <div class="form-control">
-    <label class="input-group ">
-      <span class="bg-primary/30">Password</span>
-      <input
-        bind:value={$newNode.password}
-        type="password"
-        autocomplete="on"
-        class="input-bordered input " />
-    </label>
-  </div>
-  <!-- Pin -->
-  <div class="form-control">
-    <label class="input-group ">
-      <span class="bg-primary/30">Pin</span>
-      <input
-        bind:value={$newNode.pin}
-        type="password"
-        autocomplete="on"
-        class="input-bordered input " />
-    </label>
-  </div>
-  <!-- Phone -->
-  <div class="form-control">
-    <label class="input-group ">
-      <span class="bg-primary/30">phone</span>
-      <input
-        bind:value={$newNode.phone}
-        type="text"
-        autocomplete="on"
-        class="input-bordered input " />
-    </label>
-  </div>
+      bind:value={$nodeCreationStore.label}
+      type="text"
+      class="input input-bordered rounded-md " />
+  </h1>
+  <Input label="Email" type={'email'} bind:value={$nodeCreationStore.email} />
+  <Input
+    label="Username"
+    type={'text'}
+    bind:value={$nodeCreationStore.username} />
+  <Input
+    label="Password"
+    type={'password'}
+    bind:value={$nodeCreationStore.password} />
+  <Input label="Pin" type={'password'} bind:value={$nodeCreationStore.pin} />
+  <Input label="Phone" type={'tel'} bind:value={$nodeCreationStore.phone} />
 
-  <!-- Notes -->
   <textarea
-    bind:value={$newNode.notes}
+    bind:value={$nodeCreationStore.notes}
     class="textarea-bordered textarea textarea-md h-40 w-full max-w-md"
     placeholder="Notes..." />
-</form>
+</form> -->

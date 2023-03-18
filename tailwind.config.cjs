@@ -10,26 +10,37 @@ const config = {
     extend: {
       fontFamily: {
         sans: ['roboto', ...defaultTheme.fontFamily.sans]
-      }
-    },
-    keyframes: {
-      'gradient-keyframes-x': {
-        '0%': { 'background-position': 'left' },
-        '100%': { 'background-position': 'right' }
       },
-      'gradient-keyframes-y': {
-        '0%': { 'background-position': 'top' },
-        '100%': { 'background-position': 'bottom' }
+      keyframes: {
+        'gradient-keyframes-x': {
+          '0%': { 'background-position': 'left' },
+          '100%': { 'background-position': 'right' }
+        },
+        'gradient-keyframes-y': {
+          '0%': { 'background-position': 'top' },
+          '100%': { 'background-position': 'bottom' }
+        }
+      },
+      animation: {
+        'gradient-animation-x':
+          'gradient-keyframes-x 10s linear infinite alternate',
+        'gradient-animation-y':
+          'gradient-keyframes-y 10s linear infinite alternate'
+      },
+      backgroundSize: {
+        auto: 'auto',
+        cover: 'cover',
+        contain: 'contain',
+        '50%': '50%',
+        16: '4rem'
+      },
+      backgroundImage: {
+        'background-dark': 'url(/bg-dark.jpg)',
+        'background-light': 'url(/bg-light.jpg)'
+      },
+      backgroundSize: {
+        300: '300%'
       }
-    },
-    animation: {
-      'gradient-animation-x':
-        'gradient-keyframes-x 5s linear infinite alternate',
-      'gradient-animation-y':
-        'gradient-keyframes-y 5s linear infinite alternate'
-    },
-    backgroundSize: {
-      300: '300%'
     }
   },
 
