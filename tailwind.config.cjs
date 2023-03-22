@@ -53,7 +53,9 @@ const config = {
           secondary: '#FF1E56',
           neutral: '#A9FFF7',
           accent: '#E3E7AF',
-          'base-100': '#fff'
+          'base-100': '#fff',
+          "--btn-text-case": "none",
+
         },
         dark: {
           ...require('daisyui/src/colors/themes')['[data-theme=black]'],
@@ -61,7 +63,9 @@ const config = {
           secondary: '#FF1E56',
           neutral: '#A9FFF7',
           accent: '#E3E7AF',
-          'base-100': '#11151C'
+          'base-100': '#11151C',
+          "--btn-text-case": "none",
+
         }
       }
     ]
